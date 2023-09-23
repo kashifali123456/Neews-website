@@ -12,6 +12,7 @@
   </head>
   <body>
     <div class="container">
+      <!-- Navbar -->
       <nav>
         <div class="logo">
           <h1>Daily News</h1>
@@ -20,11 +21,26 @@
           <li>Sports</li>
           <li>Technology</li>
         </div>
+
         <div class="searchBar">
-          <input type="text" placeholder="Search Here..." id="inputData" />
-          <button>Search</button>
+          <input
+            type="text"
+            placeholder="Search Here..."
+            id="inputData"
+            value=""
+          />
+          <button id="searchBtn">Search</button>
         </div>
       </nav>
+
+      <!-- Card Section -->
+      <div class="category">
+        <h1 id="type"></h1>
+      </div>
+      <div class="cardData"></div>
     </div>
+
+    <!-- Script code -->
+    <script src="app.js"></script>
   </body>
 </html>
