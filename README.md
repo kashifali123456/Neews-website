@@ -1,1 +1,5 @@
-# Neews-website
+# News-website
+
+mobile
+
+desktop
