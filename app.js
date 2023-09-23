@@ -24,6 +24,9 @@ const getData = async (input) => {
         <h3>${article.title}</h3>
         <p>${article.description}</p>
       `;
+    divs.addEventListener("click", function () {
+      window.open(article.url);
+    });
   });
 };
 window.addEventListener("load", function () {
@@ -33,3 +36,20 @@ searchBtn.addEventListener("click", function () {
   let inputData = inputText.value;
   getData(inputData);
 });
+
+function navClick(navLink) {
+  if (navLink === "politics") {
+    document.getElementById("politics").style.color = "rgb(0,140,255)";
+    document.getElementById("technology").style.color = "white";
+    document.getElementById("sports").style.color = "white";
+  } else if (navLink === "sports") {
+    document.getElementById("sports").style.color = "rgb(0,140,255)";
+    document.getElementById("politics").style.color = "white";
+    document.getElementById("technology").style.color = "white";
+  } else if (navLink === "technology") {
+    document.getElementById("technology").style.color = "rgb(0,140,255)";
+    document.getElementById("sports").style.color = "white";
+    document.getElementById("politics").style.color = "white";
+  }
+  getData(navLink);
+}
